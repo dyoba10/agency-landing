@@ -11,7 +11,7 @@
   
   <link rel="stylesheet" href="/dist/tailwind.css">
   <link rel="stylesheet" href="/dist/custom.css">
-  <title>Frontend Mentor | Sunnyside agency landing page</title>
+  <title>Sunnyside | agency landing page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <!-- <style>
@@ -35,19 +35,43 @@
   <!-- end nav-->
 
   <!-- hero -->
-  <section id="hero" class="text-white body-font h-screen">
-    <div class="container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-center">
-      <img  class="px-4" src="/images/logo.svg" alt="Sunnyside" srcset="">
-      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+  <section id="hero" class="text-white body-font h-full md:h-screen">
+    <div class="container mx-auto flex flex-wrap p-4 flex-row items-center justify-between">
+      <img  class="px-4 mt-4 md:mt-0" src="/images/logo.svg" alt="Sunnyside" srcset="">
+      <div class="md:hidden flex items-center px-4 mt-4">
+        <button class="outline-none mobile-menu-button">
+        <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
+          x-show="!showMenu"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      </div>
+      <nav class="hidden md:block md:ml-auto flex flex-wrap items-center text-base justify-center">
         <a class="mr-7 hover:text-gray-900" href="#">About</a>
         <a class="mr-7 hover:text-gray-900" href="#">Services</a>
         <a class="mr-7 hover:text-gray-900" href="#">Projects</a>
       </nav>
-      <a class="mr-5 font-fraunces bg-white text-black hover:text-white border-0 py-2  focus:outline-none hover:bg-gray-200 rounded-full text-base px-8 md:mt-0" href="#">Contact</a>
+      <a class="hidden md:block mr-5 font-fraunces bg-white text-black hover:text-white border-0 py-2  focus:outline-none hover:bg-gray-200 rounded-full text-base px-8 md:mt-0" href="#">Contact</a>
     </div>
+    <div class="hidden absolute z-50 inset-x-1 mobile-menu  mx-10 my-5 text-center bg-white rounded">
+      <ul class="">
+        <a class="block px-2 py-4 text-black hover:text-gray-900" href="#">About</a>
+        <a class="block px-2 py-4 text-black hover:text-gray-900" href="#">Services</a>
+        <a class="block px-2 py-4 text-black hover:text-gray-900" href="#">Project</a>
+      </ul>
+      <a class="block font-fraunces bg-yellow text-black mx-16 mb-8 mt-4 py-2 rounded-full" href="#">Contact</a>
+    </div>
+    
     <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
       <div class="text-center lg:w-2/3 w-full">
-        <h1 class="title-font uppercase tracking-widest subpixel-antialiased sm:text-7xl text-3xl mb-4 font-fraunces text-white">We are Creative</h1>
+        <h1 class="title-font uppercase tracking-widest subpixel-antialiased text-4xl md:text-7xl mb-4 font-fraunces text-white">We are Creative</h1>
       </div>
       <img class="object-cover object-center animate-bounce mt-4" src="/images/icon-arrow-down.svg" alt="" srcset="">
     </div>
@@ -60,12 +84,12 @@
     <div class="w-full overflow-hidden xl:w-1/2 order-last md:order-first">
       <!-- Column Content -->
       <div class="container mx-auto flex justify-center flex-col">
-        <div class="p-10 md:p-28 mx-auto">
+        <div class="p-10 md:p-28 mx-auto flex flex-wrap items-center">
           <h1 class="subpixel-antialiased text-center lg:text-left lg:text-5xl text-3xl mb-10 font-fraunces text-black">Transform your brand</h1>
           <p class="font-barlow text-gray-600 mb-10 text-center lg:text-left text-md md:text-lg">We are a full-service creative agency specializing in helping brands grow fast. 
             Engage your clients through compelling visuals that do most of the marketing for you.
           </p>
-          <a class="font-fraunces text-center" href="#">Learn More</a>
+            <a class="font-fraunces mx-auto text-xl md:text-base md:mx-0" href="#">Learn More</a>
         </div>
       </div>
     </div>
@@ -88,11 +112,11 @@
   
     <div class="w-full overflow-hidden xl:w-1/2">
       <!-- Column Content -->
-      <div class="container mx-auto flex  md:  justify-center flex-col">
-        <div class="p-10 md:p-28 mx-auto">
+      <div class="container mx-auto flex justify-center flex-col">
+        <div class="p-10 md:p-28 mx-auto flex flex-wrap items-center">
           <h1 class="subpixel-antialiased text-center md:text-left sm:text-5xl text-3xl pb-10 font-fraunces text-black">Stand out to the right audience</h1>
-        <p class="font-barlow text-gray-600 text-center md:text-left text-md pb-10 md:text-lg">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
-        <a class="font-fraunces" href="#">Learn More</a>
+          <p class="font-barlow text-gray-600 text-center md:text-left text-md pb-10 md:text-lg">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
+          <a class="font-fraunces mx-auto text-xl md:text-base md:mx-0" href="#">Learn More</a>
         </div>
       </div>
     </div>
@@ -190,38 +214,42 @@
     </div>
   
   </section>
-
+  <!--End Section 6-->
+  <!--footer-->
   <section class="" style="background : #89D3C4;">
-    <div class="ontainer px-2 md:px-40 py-32 mx-auto">
+    <div class="container px-2 md:px-40 py-24 mx-auto">
       <div class="w-full justify-center items-center">
         <div class="text-center">
           <h1 class="font-fraunces text-3xl text-dark-d-cyan mb-10">SUNNYSIDE</h1>
         </div>
       </div>
       <div class="flex flex-warp overflow-hidden justify-center">
-        <a class="mx-10 mb-10 font-barlow text-dark-d-cyan" href="#">About</a>
-        <a class="mx-10 mb-10 font-barlow text-dark-d-cyan" href="#">Services</a>
-        <a class="mx-10 mb-10 font-barlow text-dark-d-cyan" href="#">Projects</a>
+        <a class="mx-10 mb-10 font-barlow text-dark-d-cyan hover:text-white" href="#">About</a>
+        <a class="mx-10 mb-10 font-barlow text-dark-d-cyan hover:text-white" href="#">Services</a>
+        <a class="mx-10 mb-10 font-barlow text-dark-d-cyan hover:text-white" href="#">Projects</a>
       </div>  
       <div class="flex flex-wrap overflow-hidden justify-center">
           <!-- Column Content -->
 
-          <img class="mx-3 my-3" src="/images/icon-facebook.svg" alt="" srcset="">
+          <a href="#"><img class="mx-3 my-3" src="/images/icon-facebook.svg" alt="" srcset=""></a>
       
           <!-- Column Content -->
-          <img class="mx-3 my-3" src="/images/icon-instagram.svg" alt="" srcset="">
+          <a href="#"><img class="mx-3 my-3" src="/images/icon-instagram.svg" alt="" srcset=""></a>
       
           <!-- Column Content -->
-          <img class="mx-3 my-3" src="/images/icon-twitter.svg" alt="" srcset="">
+          <a href="#"><img class="mx-3 my-3" src="/images/icon-twitter.svg" alt="" srcset=""></a>
       
           <!-- Column Content -->
-          <img class="mx-3 my-3" src="/images/icon-pinterest.svg" alt="" srcset="">
+          <a href="#"><img class="mx-3 my-3" src="/images/icon-pinterest.svg" alt="" srcset=""></a>
       
       </div>
+        <div class="mx-auto text-center mt-4 pt-7 flex flex-warp justify-center">
+          <p class="font-barlow text-dark-d-cyan mr-2">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>  </p> 
+          <p class="font-barlow text-dark-d-cyan">Coded by <a href="https://github.com/dyoba10">Dyoba</a>.</p>
+        </div>
     </div>
   </section>
-  <!--End Section 6-->
-
+  <!--End footer-->
   <!-- Graphic design
   Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
 
@@ -247,9 +275,13 @@
   Projects
   Contact -->
 
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+  <script>
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
 </body>
 </html>
